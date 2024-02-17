@@ -10,10 +10,10 @@ import { navigationRef } from "~/utils/navigator.utils";
 SplashScreen.preventAutoHideAsync();
 
 const AppNavigator = () => {
+  SplashScreen.hideAsync();
   return (
     <View style={styles.container}>
       <NavigationContainer ref={navigationRef}>
-        {/* {!isAuthenticated ? <AuthStackNavigator /> : <MainStackNavigator />} */}
         <MainStackNavigator />
       </NavigationContainer>
     </View>
