@@ -15,12 +15,19 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pks.TrayaAssignment"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.pks.TrayaAssignment"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "21677d2d-9f30-4e8a-ac9c-5243943645f5"
       }
     }
   }
