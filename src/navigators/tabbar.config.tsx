@@ -50,6 +50,11 @@ export const TabBarIcon = ({
   );
 };
 
+export const profilePageOptions = {
+  // headerStyle: styles.callAndHistoryHeaderStyle,
+  headerShown: false,
+};
+
 const tabBarLabel = ({
   children: label,
   focused,

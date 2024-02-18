@@ -7,7 +7,12 @@ import {
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MainStackParams, MainTabStackParams } from "~/types/navigator.types";
 import { CategoryPage } from "~/screens";
-import { navigatorScreenOptions, TabBarIcon } from "./tabbar.config";
+import {
+  navigatorScreenOptions,
+  profilePageOptions,
+  TabBarIcon,
+} from "./tabbar.config";
+import { Profile } from "~/screens/Profile";
 
 const MainStack = createNativeStackNavigator<MainStackParams>();
 
@@ -35,7 +40,7 @@ const MainStackNavigator = () => {
       <Tab.Screen name="Home" component={CategoryPage} />
       <Tab.Screen name="Cart" component={CategoryPage} />
       <Tab.Screen name="Videos" component={CategoryPage} />
-      <Tab.Screen name="You" component={CategoryPage} />
+      <Tab.Screen name="You" component={Profile} options={profilePageOptions} />
     </Tab.Navigator>
   );
 };
