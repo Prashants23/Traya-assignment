@@ -4,7 +4,7 @@ const profile = require("./icons/profile.svg");
 const profileSelected = require("./icons/profileSelected.svg");
 const Video = require("./icons/videoIcon.svg");
 const Video_selected = require("./icons/videoIcon_selected.svg");
-const Cart_selected = require("./icons/cart_selected.svg");
+const Cart_selected = require("./icons/cart.svg");
 const Cart = require("./icons/cart.svg");
 
 import { Image } from "expo-image";

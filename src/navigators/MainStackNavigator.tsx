@@ -13,6 +13,8 @@ import {
   TabBarIcon,
 } from "./tabbar.config";
 import { Profile } from "~/screens/Profile";
+import VideoPlayer from "~/screens/Videos";
+import MonthlyCarousal from "~/screens/Cart";
 
 const MainStack = createNativeStackNavigator<MainStackParams>();
 
@@ -38,8 +40,8 @@ const MainStackNavigator = () => {
       initialRouteName="Home"
     >
       <Tab.Screen name="Home" component={CategoryPage} />
-      <Tab.Screen name="Cart" component={CategoryPage} />
-      <Tab.Screen name="Videos" component={CategoryPage} />
+      <Tab.Screen name="Cart" component={MonthlyCarousal} />
+      <Tab.Screen name="Videos" component={VideoPlayer} />
       <Tab.Screen name="You" component={Profile} options={profilePageOptions} />
     </Tab.Navigator>
   );
