@@ -8,7 +8,7 @@ import Animated, {
   useAnimatedStyle,
 } from "react-native-reanimated";
 import { StyleSheet } from "react-native";
-
+// this component is used for providing the pagoination to Carousal
 type PaginationItemProps = {
   progressValue?: SharedValue<number>;
   inactiveColor?: string;

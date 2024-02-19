@@ -12,72 +12,7 @@ import { scale } from "~/utils/scale.utils";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import IoniconsAnt from "@expo/vector-icons/AntDesign";
 import Accordion from "~/components/accordian/Accordian";
-
-const ProfilePageConfig = {
-  categories: [
-    {
-      icon: "cube",
-      title: "Order",
-    },
-    {
-      icon: "calendar-clear-outline",
-      title: "Log & Earn",
-    },
-    {
-      icon: "pie-chart-outline",
-      title: "Hair Progress",
-    },
-    {
-      icon: "fast-food-outline",
-      title: "Diet Plan",
-    },
-  ],
-  other: [
-    {
-      type: "url",
-      title: "Help & Support",
-      icon: "chatbox",
-      contentNested: null,
-      next: "",
-    },
-    {
-      type: "url",
-      title: "Read More",
-      icon: "document",
-      contentNested: null,
-      next: "",
-    },
-    {
-      title: "Nested Accordion",
-      icon: "document",
-      contentNested: [
-        {
-          title: "Nested 1",
-          url: "",
-        },
-        {
-          title: "Nested 2",
-          url: "",
-        },
-      ],
-      type: "nested",
-    },
-    {
-      type: "url",
-      title: "Read More",
-      icon: "document",
-      contentNested: null,
-      next: "",
-    },
-    {
-      type: "url",
-      title: "Read More",
-      icon: "document",
-      contentNested: null,
-      next: "",
-    },
-  ],
-};
+import { ProfilePageConfig } from "~/configs/ProfilePageConfig";
 
 export const Profile = () => {
   const { top: safeAreaTop } = useSafeAreaInsets();
@@ -102,8 +37,6 @@ export const Profile = () => {
           <Text style={styles.title}>Prashant Shukla</Text>
           <Text style={styles.subtitle}>Member since 20 days</Text>
         </View>
-
-        {/* Replace 'ios-icon-name' with your icon name */}
       </View>
 
       {/* Another section below */}
@@ -134,10 +67,10 @@ export const Profile = () => {
               />
             </TouchableOpacity>
           ) : (
-            // <></>
             <Accordion value={{ contentNested, title, icon }} type={type} />
           )
         )}
+        {/* Logout Button */}
         <TouchableOpacity style={styles.logoutBtnCss}>
           <IoniconsAnt
             name={"logout"}
@@ -152,6 +85,7 @@ export const Profile = () => {
   );
 };
 
+// @todo: There is a lot of unused or extra css that can be reused
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
@@ -183,7 +117,6 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     backgroundColor: "white",
-    // justifyContent: "",
     alignItems: "center",
     borderWidth: 1,
     borderColor: "green",

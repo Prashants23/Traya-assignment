@@ -2,17 +2,10 @@ import React, { useState } from "react";
 import { StyleSheet, View, Button, Text } from "react-native";
 import { Video } from "expo-av";
 
+// did not work ignore this comp.
 const VideoPlayer = () => {
   const [videoStatus, setVideoStatus] = useState({});
   const videoRef = React.useRef(null);
-
-  const handlePlayPause = () => {
-    if (videoStatus.isPlaying) {
-      videoRef.current.pauseAsync();
-    } else {
-      videoRef.current.playAsync();
-    }
-  };
 
   const handleVideoStatusUpdate = (status) => {
     setVideoStatus(status);

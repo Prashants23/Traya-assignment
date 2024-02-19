@@ -65,7 +65,7 @@ export default function MonthlyCarousal({}: {
         )}
         onProgressChange={(_, progress) => (progressValue.value = progress)}
       />
-      <Pagination
+      {/* <Pagination
         length={CAROUSAL_DATA.length}
         containerStyle={styles.paginationContainerStyle}
         progressValue={progressValue}
@@ -74,7 +74,7 @@ export default function MonthlyCarousal({}: {
         dotSize={10}
         dotStyle={styles.paginationDotStyle}
         inactiveColor="#fff"
-      />
+      /> */}
     </View>
   );
 }
